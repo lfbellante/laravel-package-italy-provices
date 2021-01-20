@@ -24,7 +24,7 @@ class ProvinceSeeder extends Seeder
 					foreach($response->json() as $province){
 						$newProvince = Province::where('code', $province['provincia']['codice'])->get();
 						if($newProvince->count() == 0){
-							$newProvince = new Region();
+							$newProvince = new Province();
 							$newProvince->code = $province['provincia']['codice'];
 							$newProvince->name = $province['provincia']['nome'];
 							$newProvince->abbreviation = $province['sigla'];
