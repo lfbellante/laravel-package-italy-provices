@@ -10,5 +10,17 @@
             "name": "Luca Francesco Bellante",
             "email": "lfbellante@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "Lfbellante\\ItalyProvinces\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lfbellante\\ItalyProvinces\\ItalyProvincesServiceProvider"
+            ]
+        }
+    }
 }
